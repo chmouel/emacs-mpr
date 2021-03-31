@@ -20,14 +20,15 @@ emacs directly and create the pull request
 
 ## Advanced Usage
 
-You can as well simply make your own command with your usual argument i.e: 
+You can as well simply make your own command with your usual argument i.e:
 
 ```lisp
 (defun make-pull-request-against-my-fork ()
   (interactive)
+  (message "Forking: %s" (process-lines "hub" "fork"))
   (mpr-make-pull-request "origin" "myusernameremote" "main" t))
 ```
-  
+
 and call it interactively `make-pull-request-against-my-fork` or bind to an
 [hydra menu](https://github.com/abo-abo/hydra) or a keybinding or even to a key
 inside magit the choices are unlimited...
