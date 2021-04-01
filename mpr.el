@@ -77,3 +77,5 @@
                           origin-remote-branch github-user-remote current-branch)))))
 
 (provide 'mpr)
+
+;;; mpr.el ends here
